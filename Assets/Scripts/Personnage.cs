@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor.Rendering.LookDev;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,8 @@ public class Personnage : MonoBehaviour
     public InputAction actionMarche;
     public InputAction actionSaut;
     public InputAction actionTir;
+
+
 
     // AJOUTER UNE ACTION POUR LE DASH 👇
 
@@ -35,6 +38,18 @@ public class Personnage : MonoBehaviour
 
     [Header("Dash")]
     // AJOUTER LES VARIABLES NÉCESSAIRES POUR LE DASH 👇
+    {
+
+    }
+      public void OnDash(InputAction.CallbackContext);
+    { 
+        if (context.performed)
+        {
+            Dash();
+        }
+
+    }
+
 
     [Header("Sons")]
     public AudioClip sonSaut;
