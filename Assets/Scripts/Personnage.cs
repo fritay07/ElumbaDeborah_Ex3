@@ -101,7 +101,10 @@ public class Personnage : MonoBehaviour
         animator.SetBool("estEnSaut", estAuSol == false);
 
         // GÉRER L'ANIMATION ASSOCIÉE AU DASH ICI 👇 
+        if (inputDash)
+        {
         animator.SetTrigger("Dash");
+        }
 
 
         //Ajustement du sens du personnage en fonction des touches

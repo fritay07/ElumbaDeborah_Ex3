@@ -18494,6 +18494,7 @@ GameObject:
   - component: {fileID: 8456122494387267785}
   - component: {fileID: 8456122494387267784}
   - component: {fileID: 8456122494387267786}
+  - component: {fileID: 8456122494387267787}
   m_Layer: 2
   m_Name: Personnage
   m_TagString: Player
@@ -19164,6 +19165,23 @@ MonoBehaviour:
       m_Action: Action Tir
       m_Flags: 0
     m_Flags: 0
+  actionDash:
+    m_Name: Action Dash
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d996454d-e81f-47db-b688-ca7cc02ef39e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ceeb2184-d5c5-429b-bce9-dbb3c91a5cb4
+      m_Path: <Keyboard>/b
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action Dash
+      m_Flags: 0
+    m_Flags: 0
   vitesseDeplacement: 5
   forceSaut: 15
   estAuSol: 0
@@ -19175,6 +19193,7 @@ MonoBehaviour:
   prefabPosition: {fileID: 1495170190}
   timerTir: 0
   timerTirMax: 0.5
+  dashForce: 10
   sonSaut: {fileID: 8300000, guid: 5e65700cb01e4734481efea13b8b0827, type: 3}
   sonTir: {fileID: 8300000, guid: 53cefd290c80f5c4181674f4ad48c132, type: 3}
   animator: {fileID: 2209711221998578653}
@@ -19313,6 +19332,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &8456122494387267787
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3517292784177003500}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8643567723549835048
 GameObject:
   m_ObjectHideFlags: 0
