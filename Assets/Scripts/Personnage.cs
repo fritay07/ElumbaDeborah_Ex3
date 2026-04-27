@@ -39,7 +39,6 @@ public class Personnage : MonoBehaviour
 
     [Header("Dash")]
     // AJOUTER LES VARIABLES NÉCESSAIRES POUR LE DASH 👇
-    public InputAction actionDash;
     public float dashForce = 10f;
     private bool inputDash;
 
@@ -170,6 +169,13 @@ public class Personnage : MonoBehaviour
         }
 
         // GÉRER LA PHYSIQUE ASSOCIÉE AU DASH ICI 👇 
+        if (inputDash)
+        {
+            rb.AddForce(new Vector2(direction * dashForce, 0f), ForceMode2D.Impulse);
+            animator.SetTrigger("Dash");
+            inputDash = false;
+
+        }
     }
 
 
