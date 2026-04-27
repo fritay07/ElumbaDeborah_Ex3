@@ -1,4 +1,5 @@
-﻿using UnityEditor.Rendering.LookDev;
+﻿using System;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -91,6 +92,7 @@ public class Personnage : MonoBehaviour
         inputSaut = actionSaut.WasPressedThisFrame();
         inputTir = actionTir.WasPressedThisFrame();
         //DÉTECTER LA TOUCHE POUR LE DASH ICI 👇
+        inputDash = actionDash.WasPressedThisFrame();
 
         //Vérification du sol
         estAuSol = Physics2D.Raycast(transform.position, Vector2.down, 0.4f, coucheSol);
