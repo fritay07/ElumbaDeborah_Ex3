@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -103,7 +102,7 @@ public class Personnage : MonoBehaviour
         // GÉRER L'ANIMATION ASSOCIÉE AU DASH ICI 👇 
         if (inputDash)
         {
-        animator.SetTrigger("Dash");
+            animator.SetTrigger("Dash");
         }
 
 
