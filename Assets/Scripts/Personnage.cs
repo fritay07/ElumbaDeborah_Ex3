@@ -13,6 +13,7 @@ public class Personnage : MonoBehaviour
 
 
     // AJOUTER UNE ACTION POUR LE DASH 👇
+    public InputAction actionDash;
 
 
     [Header("Déplacement horizontal")]
@@ -38,18 +39,9 @@ public class Personnage : MonoBehaviour
 
     [Header("Dash")]
     // AJOUTER LES VARIABLES NÉCESSAIRES POUR LE DASH 👇
-    {
-
-    }
-      public void OnDash(InputAction.CallbackContext);
-    { 
-        if (context.performed)
-        {
-            Dash();
-        }
-
-    }
-
+    public InputAction actionDash;
+    public float dashForce = 10f;
+    private bool inputDash;
 
     [Header("Sons")]
     public AudioClip sonSaut;
@@ -71,6 +63,7 @@ public class Personnage : MonoBehaviour
         actionTir.Enable();
 
         //ACTIVER L'ACTION DU DASH 👇
+        actionDash.Enable();
     }
 
 
@@ -82,6 +75,7 @@ public class Personnage : MonoBehaviour
         actionTir.Disable();
 
         //DÉSACTIVER L'ACTION DU DASH 👇
+        actionDash.Disable();
     }
 
 
